@@ -1,0 +1,46 @@
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset"
+
+const initialStyles=createGlobalStyle`
+    ${reset};
+    a {
+        color:inherit;
+        text-decoration:initial;
+    }
+    button {
+        color:inherit;
+        border: initial;
+        background-color: initial;
+        padding:0;
+        margin:0;
+    }
+    input {
+        color:inherit;
+        border: initial;
+        background-color: inherit;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 15px;
+
+        color: rgba(255,255,255,1);
+        background-color: rgba(25,25,25,1);
+
+        padding-top: 66px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        min-height: 100vh;
+        height: auto;
+    }
+    svg {
+        width: 20px;
+        padding: 0;
+        margin: 0;
+    }
+`;
+
+export default initialStyles;
