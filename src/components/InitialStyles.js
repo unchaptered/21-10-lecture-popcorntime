@@ -15,9 +15,13 @@ const initialStyles=createGlobalStyle`
         margin:0;
     }
     input {
+        opacity: 0.5;
         color:inherit;
         border: initial;
         background-color: inherit;
+        &:focus {
+            outline: none;
+        }
     }
     * {
         box-sizing: border-box;
@@ -29,9 +33,8 @@ const initialStyles=createGlobalStyle`
         color: rgba(255,255,255,1);
         background-color: rgba(25,25,25,1);
 
-        padding-top: 66px;
-        padding-left: 10px;
-        padding-right: 10px;
+        /* 56px + 25px */
+        padding-top: 56px;
 
         min-height: 100vh;
         height: auto;

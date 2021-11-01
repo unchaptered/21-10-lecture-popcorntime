@@ -85,7 +85,7 @@ export default withRouter( ({ location: { pathname } }) =>(
             <ALink current={pathname==="/" ? "/" : null} to="/">Home</ALink>
             <ALink current={pathname==="/tv" ? "/tv" : null} to="/tv">Tv</ALink>
             <ALink current={pathname==="/search" ? "/search" : null} to="/search">Search</ALink>
-            <Input placeholder="red" type="text"/>
+            {/* <Input placeholder="red" type="text"/> */}
         </div>
         <div>
             <ALink to="https://github.com/unchaptered?tab=repositories">

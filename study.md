@@ -2,10 +2,13 @@
 
 - [] What is React
 - [] Index
-  > Examples
-  > Guides
-  > API
-  > Styles
+  > Examples on react-router-dom
+  > Guides on react-router-dom
+  > API on react-router-dom
+  > Styles on styled-components
+  > MovieApp DB on API
+  > Container Presenter Pattern
+  > Object Destructuring (객체 비구조화 할당) on vanila JS
 
 ## Examples
 
@@ -14,12 +17,12 @@
 ## API
 
 - [] Hooks
-- [] Link
+- [✅] Link [Topic_000]
 - [] NewLink
 - [] Prompty
 - [✅] Redirect [Topic_003]
-- [] Route
-- [] Router
+- [✅] Route [Topic_006]
+- [✅] Routers : Browser,Hash,Memory,Static, with + Router
 - [✅] Composition [Topic_002]
 - [✅] Switch [Toic_004]
 - [] gneratePath
@@ -27,7 +30,6 @@
 - [] location
 - [] match
 - [] matchPath
-- [✅] Routers : Browser,Hash,Memory,Static, with + Router
 
 ### API \_ Routers
 
@@ -36,6 +38,26 @@
 - [] MemoryRouter
 - [] StaticRouter
 - [✅] withRouter [Topic-005]
+
+#### Topic 000 : What is the different between [Link to=""] and [a href=""] ?
+
+> First, <br> (a href="" /) is some kind of html tags.<br> (Link to =""/) is react-router-dom's components.
+> Second, <br> (a href="" /) is cliked, broswer is being refresh for refresh. <br> (Link to="" /) is cliked, broswer ins't being refresh for refresh. <br> When you clicked (Link /), React change Route Components.
+
+```javascript
+console.log("Nav.js");
+import { withRouter, Link } from "react-router-dom";
+
+export default withRouter(() => {
+  return (
+    <nav>
+      <Link to="/">Home</Link>
+      <Link to="/search">Search</Link>
+      <Link to="/popular">Popular</Link>
+    </nav>
+  );
+});
+```
 
 #### Topic 001 : What is the different between [BrwoserRouter] and [HashRouter] ?
 
@@ -49,9 +71,9 @@
 - localhost:3000/#
 - localhost:3000/#/search
 
-> So, If you want users to feel "it seems like web!" when they come into your App. <br> You would use BrowserRouter.
+> So, If you want users to feel "it seems like a web!" when they come into your App. <br> You would use BrowserRouter.
 
-> But, Your intension is in"it seems like app". <br> You need to use HashRouter
+> But, Your intension seems like "it seems like a app". <br> You need to use HashRouter
 
 #### Topic 002 : What is [Composition] ?
 
@@ -75,7 +97,7 @@ export default () => {
 
 > When you visit [localhost:3000/tv]. <br> Browser give you <h3>Tv</h3> And you visit [localhost:3000/tv/popular]. <br> Browser give you <h3>Tv</h3> <h5>Popular <h5>
 
-#### Topic 003 : Whit is [Redirect] ?
+#### Topic 003 : What is [Redirect] ?
 
 > Redirect looks like express middleware. <br> If user try to visit [wrong_url], Browser guide him to [default_url]
 
@@ -178,14 +200,18 @@ export default withRouter((props) => (
 ));
 ```
 
+#### Topic 006 : [withRouter] is needed for [route] to have [props] ?
+
+> To begin with, that isn't needed for [route] to have [props] <br> In React, some kind of Router gives Route props. <br>Such as, BroswerRouter and HashRouters.
+
 ## Styles
 
 > How can you connect between Component.js Component.css? <br> We suggest some kind of method to connect these.
 
-- [✅][method 1] All CSS connect one index.js
-- [✅][method 2] One CSS connect one Compoennts.js
-- [✅][method 3] One CSS Module connect correct Component.js by randomize function.
-- [✅][method 4] [Styled-Components] Type Styles by Javascript
+- [✅] All CSS connect to one index.js [method 1]
+- [✅] One CSS connect to one Compoennts.js [method 2]
+- [✅] One CSS Module connect to correct Component.js by randomize function. [method 3]
+- [✅] [Styled-Components] Type Styles by Javascript [method 4]
 
 ### method 1 :: one css connection
 
@@ -198,7 +224,7 @@ import "./index.css";
 
 ### method 2 :: component css connection
 
-> It's more complicated than method 1. <br> But We compile one css to one js. <br> Neveless, We need to remember all className to correct use. It's so insane to us
+> It's more complicated than method 1. <br> But We compile one css to one js. <br> Nevertheless, We need to remember all className to correct use. It's so insane to us
 
 ```javascript
 console.log("index.js");
@@ -214,7 +240,7 @@ import "./Nav.css";
 
 ### method 3 :: randomize css connection
 
-> First, when you see it, it's so weird. <br> Becasuse, the browser puts a tail on the class. <br> This tail means randomized serial code. <br> Neverless, we need to remeber className.<br>So, it is purposed for mini project
+> First, when you see it, it's so weird. <br> Becasuse, the browser puts a tail on the class. <br> This tail means randomized serial code. <br> Nevertheless, we need to remeber className.<br>So, it is purposed for mini project
 
 ```javascript
 console.log("index.js");
@@ -280,5 +306,27 @@ export default () => {
     <a href="/tv">Tv</a>
     <a href="/search">Search</a>
   </Nav>;
+};
+```
+
+## The MovieApp DB
+
+> Our purpose ,using this movie api, is for study about api. <br> We don't illegally host the movie. <br> I don't know this site is llegal.<br>So I suggest don't use this api for bussiness or hosting.
+
+- https://www.themoviedb.org/
+
+## Container Presenter Pattern
+
+## Object Destructuring
+
+> Object Destructuring means like this.
+
+```javascript
+// const {}=req; 이런 부분
+export function profileGet=(req,res)=>{
+  const {
+    params: { _id },
+    body: { username, password, password2, email:userEmail}
+  }=req;
 };
 ```
