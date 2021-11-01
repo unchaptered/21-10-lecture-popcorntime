@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/project-2021-10-clone-popcorntime/static/js/main.eeb861d6.chunk.js",
+    "main.js.map": "/project-2021-10-clone-popcorntime/static/js/main.eeb861d6.chunk.js.map",
+    "runtime-main.js": "/project-2021-10-clone-popcorntime/static/js/runtime-main.402f2ee4.js",
+    "runtime-main.js.map": "/project-2021-10-clone-popcorntime/static/js/runtime-main.402f2ee4.js.map",
+    "static/js/2.33c6177b.chunk.js": "/project-2021-10-clone-popcorntime/static/js/2.33c6177b.chunk.js",
+    "static/js/2.33c6177b.chunk.js.map": "/project-2021-10-clone-popcorntime/static/js/2.33c6177b.chunk.js.map",
+    "index.html": "/project-2021-10-clone-popcorntime/index.html",
+    "static/js/2.33c6177b.chunk.js.LICENSE.txt": "/project-2021-10-clone-popcorntime/static/js/2.33c6177b.chunk.js.LICENSE.txt",
+    "static/media/noPosterSmall.png": "/project-2021-10-clone-popcorntime/static/media/noPosterSmall.ea2ad102.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.402f2ee4.js",
+    "static/js/2.33c6177b.chunk.js",
+    "static/js/main.eeb861d6.chunk.js"
+  ]
+}
