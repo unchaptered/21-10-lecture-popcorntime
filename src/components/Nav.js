@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav=styled.nav`
+    z-index: 9;
     position: fixed;
     top:0;
     left:0;
@@ -82,7 +83,7 @@ export default withRouter( ({ location: { pathname } }) =>(
             {/* You have 2 method... But 2nd method make some warning */}
             {/* ALink current={pathname==="/" ? "text" : null}*/}
             {/* Alink current={pathname==="/"} */}
-            <ALink current={pathname==="/" ? "/" : null} to="/">Home</ALink>
+            <ALink current={pathname==="/" ? "/" : null} to="/">Movie</ALink>
             <ALink current={pathname==="/tv" ? "/tv" : null} to="/tv">Tv</ALink>
             <ALink current={pathname==="/search" ? "/search" : null} to="/search">Search</ALink>
             {/* <Input placeholder="red" type="text"/> */}

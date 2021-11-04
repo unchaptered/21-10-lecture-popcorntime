@@ -138,9 +138,11 @@ const DetailPresenter=({ result, error, loading })=>
                         }</Item>
                         <Devider> ◽ </Devider>
                         <Item>{result.runtime ?
-                            result.runtime :
-                            result.episode_run_time[0]
-                        } MIN </Item>
+                            `${result.runtime} MIN` :
+                            (result.episode_run_time ?
+                                `${result.episode_run_time[0]} MIN` :
+                                `Not Found` )
+                        }  </Item>
                         <Devider> ◽ </Devider>
                         <Item>
                             { result.genres &&

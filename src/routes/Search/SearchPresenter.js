@@ -9,12 +9,14 @@ import Loader from "../../components/Loader";
 import Message from "../../components/Message";
 
 const SearchContainer=styled.div`
-width: 100%;
-display: flex;
-flex-direction: column;
+    padding: 18px 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 `;
 
 const Form=styled.form`
+margin-bottom: 18px;
 width: 100%;
 display: flex;
 justify-content: center;

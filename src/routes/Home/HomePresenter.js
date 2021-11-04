@@ -9,7 +9,7 @@ import Loader from "../../components/Loader";
 import Message from "../../components/Message";
 
 const HomeContainer=styled.div`
-    padding: 0 10px;
+    padding: 18px 10px;
 `;
 
 const HomePresenter=({ popular, upComing, nowPlaying, error, loading })=>

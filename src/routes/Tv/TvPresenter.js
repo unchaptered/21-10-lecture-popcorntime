@@ -9,7 +9,7 @@ import Loader from "../../components/Loader";
 import Message from "../../components/Message";
 
 const TvContainer=styled.div`
-    padding: 0 10px;
+    padding: 18px 10px;
 `;
 
 const TvPresenter=({ popular, topRated, airingToday, error, loading })=>

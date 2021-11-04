@@ -8,7 +8,6 @@ const PosterContainer=styled.div`
     font-size:  12px;
 `;
 
-
 const Image=styled.div`
     background-image: url(${props=>props.bgUrl});
     height: 350px;
@@ -39,12 +38,13 @@ const ImageDiv=styled.div`
         position: relative;
     `;
 const Title=styled.span`
+    font-size: 14px;
+    margin: 7px 0 3px 0;
     display: block;
-    margin-bottom: 3px;
 `;
 const Year=styled.span`
     font-size: 10px;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.3);
 `;
 
 const Poster=({id, imageUrl, title, rating, year, isMovie=false})=>(
@@ -63,10 +63,10 @@ const Poster=({id, imageUrl, title, rating, year, isMovie=false})=>(
                     </span>{" "}
                     {rating}/10
                 </Rating>
-                <Year>{year}</Year>
                 <Title>
                     {title.length > 18 ? `${title.substring(0, 18)}...` : title}
                 </Title>
+                <Year>{year}</Year>
             </ImageDiv>
         </PosterContainer>
 
