@@ -1,6 +1,10 @@
-# Popcorn Movie
+# 21-10-clone-popcorntime
 
-Learning React while making popcorn movie app
+아래 강의의 chapter 10~17 까지 진행한 코드 내용
+[강의기반](https://nomadcoders.co/react-masterclass/lobby)
+
+1~9 미진행
+18~19 미진행
 
 ## Screens
 
