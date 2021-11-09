@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 
 import propType from "prop-types";
 
@@ -12,7 +12,7 @@ import Search from "./routes/Search";
 
 export default ()=>{
     return (
-        <Router>
+        <BrowserRouter>
             <>
                 <Nav />
                 <Switch>
@@ -25,6 +25,6 @@ export default ()=>{
                     <Redirect from="*" to="/" />
                 </Switch>
             </>
-        </Router>
+        </BrowserRouter>
     );
 };
